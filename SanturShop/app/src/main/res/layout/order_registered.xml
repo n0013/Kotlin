@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+
+
+    >
+
+
+    <include
+        android:id="@+id/order_reg_appbar"
+        layout="@layout/include_appbar"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </include>
+
+    <TextView
+        android:id="@+id/order_reg_title"
+        style="@style/Title_Bold16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="56dp"
+        android:gravity="center"
+        android:minHeight="44dp"
+
+
+        android:text="Заказ №786782 на сумму 1 900 Р. оформлен"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/order_reg_appbar">
+
+    </TextView>
+
+<!--    Для отслеживания статуса, можно перейти в заказ"-->
+    <TextView
+
+        android:id="@+id/order_reg_text"
+        style="@style/Body_Regular14"
+        android:textColor="@color/type_gray50"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="80dp"
+
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
+
+        android:text="Спасибо за оформленный заказ. В ближайшее время наш менеджер свяжется с вами для подтверждения заказа."
+
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/order_reg_title">
+
+    </TextView>
+
+
+    <TextView
+
+        android:id="@+id/order_reg_btn_detail_order"
+        style="@style/Button"
+        android:textColor="@color/primary"
+
+        android:background="@drawable/btn_deactive_gray"
+        android:gravity="center"
+
+        android:visibility="gone"
+
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+
+        android:text="Детали заказа"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/order_reg_text">
+
+    </TextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

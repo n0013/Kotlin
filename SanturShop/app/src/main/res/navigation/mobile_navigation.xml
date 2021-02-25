@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    android:label="recovery_password"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="ru.isantur.santurshop.fragment.home"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home"
+        app:enterAnim="@anim/slide_in_up"
+        app:exitAnim="@anim/slide_out_up"
+        >
+        <action
+            android:id="@+id/go_fromHome_inCatalogs"
+            app:destination="@id/navigation_catalog" />
+        <action
+            android:id="@+id/go_fromHome_inProduct"
+            app:destination="@id/Product" />
+        <action
+            android:id="@+id/go_fromHome_inSearch"
+            app:destination="@id/Search" />
+        <action
+            android:id="@+id/go_fromHome_inOrderHistory"
+            app:destination="@id/order_History" />
+        <action
+            android:id="@+id/go_fromHome_inProductLists"
+            app:destination="@id/ProductsLists" />
+        <action
+            android:id="@+id/go_fromHome_inMap"
+            app:destination="@id/map"
+            app:enterAnim="@anim/slide_in_up"
+            app:exitAnim="@anim/slide_out_up"
+            app:popEnterAnim="@anim/slide_in_up"
+            app:popExitAnim="@anim/slide_out_up" />
+        <!--        <action-->
+<!--            android:id="@+id/go_fromHome_inMap"-->
+<!--            app:destination="@id/map" />-->
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_catalog"
+        android:name="ru.isantur.santurshop.fragment.catalog.catalog"
+        android:label="@string/title_catalog"
+        tools:layout="@layout/fragment_catalog"
+
+        app:enterAnim="@anim/slide_in_up"
+        app:exitAnim="@anim/slide_out_up"
+        app:popEnterAnim="@anim/slide_in_up"
+        app:popExitAnim="@anim/slide_out_up"
+
+        >
+
+
+        <action
+            android:id="@+id/go_fromCatalog_inCatalogSub"
+            app:destination="@id/catalog_sub" />
+    </fragment>
+
+<!--    <fragment-->
+<!--        android:id="@+id/ListProduct"-->
+<!--           android:label="@string/title_catalog"-->
+<!--        tools:layout="@layout/element_list_product" >-->
+<!--        <argument-->
+<!--            android:name="id"-->
+<!--            app:argType="string" />-->
+<!--    </fragment>-->
+
+    <fragment
+        android:id="@+id/Product"
+        android:name="ru.isantur.santurshop.fragment.products.product"
+        android:label="Product"
+        tools:layout="@layout/element_product">
+        <argument
+            android:name="code" app:argType="string" />
+        <argument
+            android:name="from"
+            app:argType="string" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/Search"
+        android:name="ru.isantur.santurshop.fragment.search"
+        tools:layout="@layout/search_main">
+        <action
+            android:id="@+id/go_fromSearch_inListProducts"
+            app:destination="@id/ProductsLists" />
+        <action
+            android:id="@+id/go_fromSearch_inHome"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/ProductsLists"
+        android:name="ru.isantur.santurshop.fragment.products.product_list"
+        android:label="@string/title_catalog"
+        tools:layout="@layout/list_prod">
+
+<!--        <action-->
+<!--            android:id="@+id/go_ListsProducts"-->
+<!--            app:destination="@id/ListProduct" />-->
+        <action
+            android:id="@+id/go_fromProductLists_inCatalogSub"
+            app:destination="@id/catalog_sub" />
+
+
+        <argument
+            android:name="from"
+            app:argType="string" />
+        <argument
+            android:name="kt"
+            app:argType="string" />
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <action
+            android:id="@+id/go_fromProductsLists_inProduct"
+            app:destination="@id/Product"/>
+        <action
+            android:id="@+id/go_fromProductsLists_inFilters"
+            app:destination="@id/filters" />
+        <argument
+            android:name="heading"
+            app:argType="string" />
+
+
+    </fragment>
+     <fragment
+        android:id="@+id/navigation_favorite"
+        android:name="ru.isantur.santurshop.fragment.favorite"
+        android:label="@string/title_favorite"
+        tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/go_fromFavorites_inProduct"
+            app:destination="@id/Product" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_cart"
+        android:name="ru.isantur.santurshop.fragment.cart"
+        android:label="@string/title_cart"
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/go_fromCartList_inProduct"
+            app:destination="@id/Product" />
+        <action
+            android:id="@+id/go_fromCart_inCheckout"
+            app:destination="@id/checkout" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profile_home"
+        android:name="ru.isantur.santurshop.fragment.profile.profile_home"
+        android:label="@string/title_profile"
+        tools:layout="@layout/profile_home"
+        >
+
+        <action
+            android:id="@+id/go_fromProfileHome_inInputPhoneEmail"
+            app:destination="@id/profile_input"/>
+        <action
+            android:id="@+id/go_fromProfileHome_inFavorite"
+            app:destination="@id/navigation_favorite" />
+        <action
+            android:id="@+id/go_fromProfileHome_inProfileInfo"
+            app:destination="@id/profile_Info"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/profile_input"
+        android:name="ru.isantur.santurshop.fragment.profile.profile_input"
+        android:label="@string/title_profile"
+        tools:layout="@layout/profile_input">
+        <action
+            android:id="@+id/go_fromProfileInput_inRegistration"
+            app:destination="@id/profile_registration"
+            app:enterAnim="@android:anim/slide_in_left" />
+        <action
+            android:id="@+id/go_fromProfileInput_inRecoveryPassword"
+            app:destination="@id/profile_recovery_password"
+            app:enterAnim="@android:anim/slide_in_left" />
+        <action
+            android:id="@+id/go_fromProfileInput_inProfileMy"
+            app:destination="@id/profile_my"
+            app:enterAnim="@android:anim/slide_in_left" />
+        <action
+            android:id="@+id/go_fromProfileInput_inProfileHome"
+            app:destination="@id/profile_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profile_registration"
+        android:name="ru.isantur.santurshop.fragment.profile.profile_registration"
+        android:label="@string/title_profile"
+        tools:layout="@layout/profile_registration" >
+        <action
+            android:id="@+id/go_fromProfileRegistration_inProfileInput"
+            app:destination="@id/profile_input" />
+        <action
+            android:id="@+id/go_fromProfileRegistration_inProfileMy"
+            app:destination="@id/profile_my" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profile_recovery_password"
+        android:name="ru.isantur.santurshop.fragment.profile.profile_recovery_password"
+        android:label="@string/title_profile"
+        tools:layout="@layout/profile_recovery_password" >
+        <action
+            android:id="@+id/go_fromRecoveryPassword_inProfileInput"
+            app:destination="@id/profile_input" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_profile_"
+        android:name="ru.isantur.santurshop.fragment.profile.profile_"
+        android:label="Profile_"
+        tools:layout="@layout/profile_"
+        >
+        <action
+            android:id="@+id/go_profileHome"
+            app:destination="@id/profile_home"
+            />
+<!--            app:enterAnim="@anim/slide_in_up"-->
+<!--            app:exitAnim="@anim/slide_out_up"-->
+
+        <action
+            android:id="@+id/go_profileMy"
+            app:destination="@id/profile_my" />
+    </fragment>
+     <fragment
+        android:id="@+id/profile_my"
+        android:name="ru.isantur.santurshop.fragment.profile.profile_my"
+        android:label="Profile_my"
+        tools:layout="@layout/profile_my"
+        >
+        <action
+            android:id="@+id/go_fromProfileMy_inFavorite"
+            app:destination="@id/navigation_favorite" />
+        <action
+            android:id="@+id/go_fromProfileMy_inProfileInfo"
+            app:destination="@id/profile_Info" />
+        <action
+            android:id="@+id/go_fromProfileMy_inProfileSettings"
+            app:destination="@id/profile_settings" />
+        <action
+            android:id="@+id/go_fromProfileMy_inOrderHistory"
+            app:destination="@id/order_History" />
+    </fragment>
+    <!--    <activity-->
+<!--        android:id="@+id/load"-->
+<!--        android:name="ru.isantur.santurshop.Activity.Load"-->
+<!--        android:label="Load"-->
+<!--        tools:layout="@layout/screen_loading"-->
+<!--        />-->
+    <activity
+        android:id="@+id/selectCity"
+        android:name="ru.isantur.santurshop.activity.select_city"
+        android:label="SelectSity"
+        tools:layout="@layout/alert_dialog"
+        >
+        <argument
+            android:name="from"
+            app:argType="string" />
+    </activity>
+    <fragment
+        android:id="@+id/profile_Info"
+        android:name="ru.isantur.santurshop.fragment.profile.profile_info"
+        android:label="Profile_Info"
+        tools:layout="@layout/profile_info"
+        >
+        <action
+            android:id="@+id/go_fromProfileInfo_inInfoAboutCompany"
+            app:destination="@id/info_About_Company" />
+        <action
+            android:id="@+id/go_fromProfileInfo_inInfoDelivery"
+            app:destination="@id/info_Delivery" />
+        <action
+            android:id="@+id/go_fromProfileInfo_inInfoPayment"
+            app:destination="@id/info_Payment" />
+        <action
+            android:id="@+id/go_fromProfileInfo_inInfoAboutApp"
+            app:destination="@id/info_About_App" />
+        <action
+            android:id="@+id/go_fromProfileInfo_inProfileHome"
+            app:destination="@id/profile_home"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/go_fromProfileInfo_inProfileMy"
+            app:destination="@id/profile_my" />
+        <argument
+            android:name="from"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/info_About_Company"
+        android:name="ru.isantur.santurshop.fragment.info.info_about_company"
+        android:label="Info_About_Company"
+        tools:layout="@layout/info_about_company"
+        >
+        <action
+            android:id="@+id/go_fromInfoAboutCompany_inProfileInfo"
+            app:destination="@id/profile_Info" />
+    </fragment>
+    <fragment
+        android:id="@+id/info_Delivery"
+        android:name="ru.isantur.santurshop.fragment.info.info_delivery"
+        android:label="Info_Delivery"
+        tools:layout="@layout/info_delivery"
+        >
+        <action
+            android:id="@+id/go_fromInfoDelivery_inProfileInfo"
+            app:destination="@id/profile_Info" />
+    </fragment>
+    <fragment
+        android:id="@+id/info_Payment"
+        android:name="ru.isantur.santurshop.fragment.info.info_sale_rules"
+        android:label="Info_Payment"
+        tools:layout="@layout/info_sale_rules"
+        >
+        <action
+            android:id="@+id/go_fromInfoPayment_inProfileInfo"
+            app:destination="@id/profile_Info" />
+    </fragment>
+    <fragment
+        android:id="@+id/info_About_App"
+        android:name="ru.isantur.santurshop.fragment.info.info_about_app"
+        android:label="Info_About_App"
+        tools:layout="@layout/info_about_app"
+        >
+        <action
+            android:id="@+id/go_fromInfoAboutApp_inProfileInfo"
+            app:destination="@id/profile_Info" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile_settings"
+        android:name="ru.isantur.santurshop.fragment.profile.profile_settings"
+        android:label="Profile_settings"
+        tools:layout="@layout/profile_settings"
+        >
+        <action
+            android:id="@+id/go_fromProfileSettings_inProfile"
+            app:destination="@id/navigation_profile_" />
+    </fragment>
+    <fragment
+        android:id="@+id/filters"
+        android:name="ru.isantur.santurshop.fragment.filters"
+        android:label="Filters"
+        tools:layout="@layout/screen_filters"
+
+        >
+        <action
+            android:id="@+id/go_fromFilter_inProductList"
+            app:destination="@id/ProductsLists" />
+        <action
+            android:id="@+id/go_fromFilters_inFiltersChild"
+            app:destination="@id/filters_child" />
+        <argument
+            android:name="heading"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/filters_child"
+        android:name="ru.isantur.santurshop.fragment.filters_child"
+        android:label="Filters_child"
+        tools:layout="@layout/screen_filters_child"
+        >
+        <action
+            android:id="@+id/go_fromFiltersChild_inFilters"
+            app:destination="@id/filters" />
+        <argument
+            android:name="Items"
+            app:argType="ru.isantur.santurshop.Data.Items" />
+        <argument android:name="position"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+         android:id="@+id/map"
+        android:name="ru.isantur.santurshop.fragment.map.map"
+        android:label="Map"
+        tools:layout="@layout/fragment_map"
+        />
+    <fragment
+        android:id="@+id/checkout"
+        android:name="ru.isantur.santurshop.fragment.checkout.checkout"
+        android:label="Checkout"
+        tools:layout="@layout/fragment_checkout"
+        >
+        <action
+            android:id="@+id/go_fromCheckout_inProfileQuickRegistration"
+            app:destination="@id/profile_quick_registration" />
+        <action
+            android:id="@+id/go_fromCheckout_inOrderRegistrated"
+            app:destination="@id/order_Registered" />
+        <action
+            android:id="@+id/go_fromCheckout_inCart"
+            app:destination="@id/navigation_cart" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile_quick_registration"
+        android:name="ru.isantur.santurshop.fragment.profile.profile_quick_registration"
+        android:label="Profile_quick_registration"
+        tools:layout="@layout/profile_registration"
+        >
+        <action
+            android:id="@+id/go_fromProfileQuickRegistration_inCheckout"
+            app:destination="@id/checkout" />
+        <action
+            android:id="@+id/go_fromProfileQuickRegistration_inProfileInput"
+            app:destination="@id/profile_input" />
+    </fragment>
+    <fragment
+        android:id="@+id/order_Registered"
+        android:name="ru.isantur.santurshop.fragment.orders.order_registered"
+        android:label="Order_Registered"
+        tools:layout="@layout/order_registered"
+
+        />
+    <fragment
+        android:id="@+id/order_History"
+        android:name="ru.isantur.santurshop.fragment.orders.order_history"
+        android:label="Order_History"
+        tools:layout="@layout/fragment_order_history"
+        >
+        <action
+            android:id="@+id/go_fromOrderHistory_inCart"
+            app:destination="@id/navigation_cart" />
+    </fragment>
+    <fragment
+        android:id="@+id/catalog_sub"
+        android:name="ru.isantur.santurshop.fragment.catalog.catalog_sub"
+        android:label="catalog_sub"
+        tools:layout="@layout/fragment_catalog_sub"
+        >
+        <action
+            android:id="@+id/go_fromCatalogSub_inProductLists"
+            app:destination="@id/ProductsLists" />
+        <action
+            android:id="@+id/go_fromCatalogSub_inCatalog"
+            app:destination="@id/navigation_catalog" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>

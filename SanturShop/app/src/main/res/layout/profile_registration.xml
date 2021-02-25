@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="55dp"
+
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/reg_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_marginTop="55dp"
+
+        android:visibility="visible"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/reg_txt_name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+
+            app:errorEnabled="true"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/reg_name"
+                style="@style/Subtitle_Regular15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Имя Фамилия"
+                android:inputType="textPersonName"
+
+
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/reg_txt_phone"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reg_txt_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/reg_phone"
+                style="@style/Subtitle_Regular15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Телефон"
+                android:inputType="number"
+
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:id="@+id/reg_base_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="4dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reg_txt_phone">
+
+            <TextView
+                android:id="@+id/reg_phone_error"
+                style="@style/Caption_Regular13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Профиль с таким номером уже существует."
+                android:textColor="@android:color/holo_red_dark"
+
+                >
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/reg_phone_error_2"
+                style="@style/Caption_Regular13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Войти?"
+                android:textAllCaps="false"
+
+                android:textColor="@android:color/holo_red_dark"
+                android:typeface="normal">
+
+            </TextView>
+
+            <View
+                android:id="@+id/reg_phone_error_3"
+                style="@style/Divider"
+                android:background="@android:color/holo_red_dark" />
+
+        </LinearLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/reg_txt_email"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+
+            app:errorEnabled="true"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reg_base_error">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/reg_email"
+                style="@style/Subtitle_Regular15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/reg_btn_reg"
+            style="@style/Button"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/btn_active"
+            android:foreground="?android:attr/selectableItemBackground"
+
+            android:gravity="center"
+            android:tag="reg_btn_reg"
+
+            android:text="@string/Registration"
+            android:textColor="@color/white"
+            android:visibility="visible"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reg_txt_email" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/Caption_Regular13"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+
+
+            android:gravity="center"
+
+            android:text="Нажимая на кнопку Зарегистрироваться, вы подтверждаете, что ознакомились с соглашением на обработку персональных данных и принимаете его условия"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reg_btn_reg">
+
+        </com.google.android.material.textview.MaterialTextView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--    app bar-->
+    <include
+        android:id="@+id/reg_appbar"
+        layout="@layout/include_appbar"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!--    for internet-->
+    <include
+        android:id="@+id/reg_status"
+        layout="@layout/include_status"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/reg_pb_body"
+        style="@style/Body_Regular14"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_marginTop="200dp"
+
+        android:text="Подождите, идет регистрация ..."
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!--    progress-->
+    <ProgressBar
+        android:id="@+id/reg_pb"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:theme="@style/LoadProducts"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

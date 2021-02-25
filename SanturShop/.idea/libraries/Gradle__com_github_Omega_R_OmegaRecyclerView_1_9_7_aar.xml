@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.Omega-R:OmegaRecyclerView:1.9.7@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/Library/Android/gradle-6.3/caches/transforms-2/files-2.1/ce699a0862305b45c3bee99af3b664b9/jetified-OmegaRecyclerView-1.9.7/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Library/Android/gradle-6.3/caches/transforms-2/files-2.1/ce699a0862305b45c3bee99af3b664b9/jetified-OmegaRecyclerView-1.9.7/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/Library/Android/gradle-6.3/caches/transforms-2/files-2.1/ce699a0862305b45c3bee99af3b664b9/jetified-OmegaRecyclerView-1.9.7/res" />
+      <root url="file://$USER_HOME$/Library/Android/gradle-6.3/caches/transforms-2/files-2.1/ce699a0862305b45c3bee99af3b664b9/jetified-OmegaRecyclerView-1.9.7/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Library/Android/gradle-6.3/caches/modules-2/files-2.1/com.github.Omega-R/OmegaRecyclerView/1.9.7/52b1931497e4a7816cd4b069d7e48f9231b18432/OmegaRecyclerView-1.9.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: nl.komponents.kovenant:kovenant-functional:3.3.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Library/Android/gradle-6.3/caches/modules-2/files-2.1/nl.komponents.kovenant/kovenant-functional/3.3.0/685c048fd5d5b9befe3428223746302b893894be/kovenant-functional-3.3.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/Library/Android/gradle-6.3/caches/modules-2/files-2.1/nl.komponents.kovenant/kovenant-functional/3.3.0/69ed46fc47e948f97ddac946b3bc825975f3753f/kovenant-functional-3.3.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Library/Android/gradle-6.3/caches/modules-2/files-2.1/nl.komponents.kovenant/kovenant-functional/3.3.0/52aeac4425a5774944824de71f0ba0093f123312/kovenant-functional-3.3.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

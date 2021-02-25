@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/oh_rv_page"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="88dp"
+    app:cardElevation="0dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    >
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+
+
+        >
+
+
+        <ImageView
+            android:id="@+id/oh_rv_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+
+            app:srcCompat="@mipmap/ic_launcher"
+            android:layout_marginStart="16dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/oh_rv_name"
+            android:tag="item_name"
+            style="@style/Caption_Regular13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="36dp"
+            android:maxLines="2"
+            android:gravity="center_vertical"
+            android:layout_marginStart="72dp"
+
+            android:layout_marginEnd="16dp"
+            android:lines="2"
+            android:text="name"
+
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/oh_rv_img"
+            app:layout_constraintTop_toTopOf="parent">
+        </TextView>
+
+        <TextView
+            android:id="@+id/oh_rv_prices"
+            style="@style/Caption_Semibold13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="20dp"
+            android:tag="item_prices"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="6dp"
+            android:text="price"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/oh_rv_name" />
+
+
+        <TextView
+            android:id="@+id/oh_rv_received"
+            android:tag="item_received"
+            style="@style/Caption_Regular13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="получено: 0 из 120 шт."
+            android:textColor="@color/type_gray50"
+
+            app:layout_constraintBottom_toBottomOf="@+id/oh_rv_prices"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/oh_rv_prices" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

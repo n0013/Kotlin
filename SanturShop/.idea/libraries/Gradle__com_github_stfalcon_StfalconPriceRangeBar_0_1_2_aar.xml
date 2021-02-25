@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.stfalcon:StfalconPriceRangeBar:0.1.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Library/Android/gradle-6.3/caches/transforms-2/files-2.1/dd1ceadf4c440e3f7960f7a9586ceb1d/jetified-StfalconPriceRangeBar-0.1.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/Library/Android/gradle-6.3/caches/transforms-2/files-2.1/dd1ceadf4c440e3f7960f7a9586ceb1d/jetified-StfalconPriceRangeBar-0.1.2/res" />
+      <root url="file://$USER_HOME$/Library/Android/gradle-6.3/caches/transforms-2/files-2.1/dd1ceadf4c440e3f7960f7a9586ceb1d/jetified-StfalconPriceRangeBar-0.1.2/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/Library/Android/gradle-6.3/caches/modules-2/files-2.1/com.github.stfalcon/StfalconPriceRangeBar/0.1.2/1a7afce7e6c3556618fd485c789d9d78ac9dbb4e/StfalconPriceRangeBar-0.1.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Library/Android/gradle-6.3/caches/modules-2/files-2.1/com.github.stfalcon/StfalconPriceRangeBar/0.1.2/3eab85f62e0361fb13022ebb52305ba90e26f0a1/StfalconPriceRangeBar-0.1.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

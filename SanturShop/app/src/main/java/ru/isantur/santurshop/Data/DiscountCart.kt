@@ -1,0 +1,1 @@
+package ru.isantur.santurshop.Dataimport kotlinx.serialization.Serializable@Serializableclass DiscountCart (    var code: String,    var subjcode:String,    var subjname: String,    var vid: String,    var personphone: String,    var personemail: String,    var balance: Float,    var discount: String)

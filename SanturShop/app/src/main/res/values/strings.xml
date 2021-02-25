@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">MC</string>
+
+<!--    Min and Max-->
+    <string name="demo_min_label">Min</string>
+    <string name="demo_max_label">Max</string>
+
+<!--    нижнее меню:-->
+    <string name="title_home">Главная</string>
+    <string name="title_catalog">Каталог</string>
+    <string name="title_favorite">Избранное</string>
+    <string name="title_cart">Корзина</string>
+    <string name="title_profile">Профиль</string>
+
+<!--    3 кнопки на home экране-->
+    <string name="title_history">История</string>
+    <string name="title_place">Адреса</string>
+
+<!--    Registration-->
+    <string name="Input">Войти</string>
+    <string name="Registration">Зарегистрироваться</string>
+    <string name="Send">Отправить</string>
+
+    <string name="Delete">Удалить</string>
+    <string name="Cancel">Отменить</string>
+
+    <string name="mainUrl">http://isantur.ru/mobile</string>
+
+
+    <string name="ByPhone">По телефону</string>
+    <string name="ByEmail">По email</string>
+
+    <string name="headline_6">Title</string>
+
+    <string name="txt_sales">Рекомендуем товары</string>
+    <string name="txt_populars">Популярные категории</string>
+    <string name="txt_brands">Наши бренды</string>
+    <string name="name2_rv">name2_rv</string>
+    <string name="name_rv">name_rv</string>
+
+
+</resources>

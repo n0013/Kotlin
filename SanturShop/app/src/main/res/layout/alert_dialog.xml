@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/dialog_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:focusable="true"
+
+    >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dialog_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:visibility="visible"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/dialog_text"
+            style="@style/Body_Regular15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="63dp"
+
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+
+
+            android:text="some text"
+
+            android:textColor="@color/type_black"
+
+            android:visibility="visible"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </TextView>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/dialog_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:visibility="visible"
+            android:layout_marginTop="55dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <View
+            android:id="@+id/dialog_divider_end"
+            style="@style/BaseDivider"
+
+
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_text" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dialog_two_button"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+
+            android:layout_marginTop="24dp"
+            android:visibility="visible"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_divider_end"
+
+            >
+
+            <TextView
+                android:id="@+id/dialog_cancel"
+                style="@style/Button"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+
+                android:gravity="center"
+                android:text="Cancel"
+                android:textColor="@color/primary"
+
+                app:layout_constraintEnd_toStartOf="@+id/dialog_action"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/dialog_action"
+                style="@style/Button"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+
+                android:gravity="center"
+
+                android:text="Action"
+                android:textColor="@color/primary"
+
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/dialog_big_button"
+            style="@style/Button"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+
+            android:layout_marginBottom="24dp"
+
+            android:background="@drawable/btn_active"
+
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:tag="profile_home_btn_input"
+            android:text="Some button"
+            android:textColor="@color/white"
+            android:visibility="visible"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    <!--    app bar-->
+    <include layout="@layout/include_appbar"
+        android:id="@+id/dialog_appbar"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <!--    for internet-->
+    <include layout="@layout/include_status"
+        android:id="@+id/dialog_status"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

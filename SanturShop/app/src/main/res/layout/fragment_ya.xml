@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginBottom="55dp"
+
+    >
+
+
+
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+
+<!--        android:id="@+id/ya_update"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="bottom|right"-->
+<!--        android:layout_margin="16dp"-->
+<!--        android:backgroundTint="@color/primary"-->
+<!--        android:contentDescription="Обновить"-->
+<!--        android:src="@android:drawable/ic_popup_sync"-->
+<!--        app:fabSize="mini"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+
+
+<!--    <WebView-->
+<!--        android:id="@+id/ya_page"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/ya_btn"-->
+<!--        style="@style/ButtonBase"-->
+<!--        android:layout_width="103dp"-->
+<!--        android:layout_height="32dp"-->
+<!--        android:background="@drawable/btn_active"-->
+<!--        android:foreground="?android:attr/selectableItemBackground"-->
+
+<!--        android:gravity="center"-->
+
+<!--        android:layout_marginBottom="15dp"-->
+<!--        android:layout_marginEnd="15dp"-->
+
+<!--        android:text="Передать"-->
+<!--        android:textColor="@color/white"-->
+
+<!--        android:visibility="visible"-->
+
+<!--        app:layout_constraintBottom_toBottomOf="@+id/ya_page"-->
+<!--        app:layout_constraintEnd_toEndOf="parent" />-->
+
+
+
+
+<!--    appbar-->
+    <include layout="@layout/include_appbar"
+        android:id="@+id/ya_appbar"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+<!--    status-->
+    <include layout="@layout/include_status"
+        android:id="@+id/ya_status"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+<!--    progress bar-->
+    <ProgressBar
+        android:id="@+id/ya_pb"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:theme="@style/LoadProducts"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginBottom="55dp"
+
+    >
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/oh_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
+
+        android:visibility="visible"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/oh_title"
+                style="@style/Title_Bold16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="16dp"
+
+
+                android:text="Заказ №184813 от 20.04.2020"
+
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/oh_status"
+                style="@style/Subtitle_Semibold14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"
+
+                android:text="Обработан"
+
+                android:textColor="@color/success"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/oh_title" />
+
+
+            <TextView
+                android:id="@+id/oh_product_title"
+                style="@style/Title_Bold16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+
+                android:text="Товары (25)"
+
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/oh_status" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/oh_product_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="12dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/oh_product_title">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/oh_product_rv">
+
+
+                <TextView
+                    android:id="@+id/oh_product_txt"
+                    style="@style/Body_Regular14"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="16dp"
+                    android:text="Товары"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/oh_pickup_txt"
+                    style="@style/Body_Regular14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+
+                    android:text="Самовывоз"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/oh_product_txt">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/oh_point_txt"
+                    style="@style/Body_Regular14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+
+                    android:text="Баллы"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/oh_pickup_txt">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/oh_discount_txt"
+                    style="@style/Body_Regular14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+
+                    android:text="Скидка"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/oh_point_txt">
+
+                </TextView>
+
+
+                <TextView
+                    android:id="@+id/oh_total_txt"
+                    style="@style/Subtitle_Semibold14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="19dp"
+
+                    android:text="Итого"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/oh_discount_txt">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/oh_product_n"
+                    style="@style/Body_Regular14"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginEnd="16dp"
+                    android:text="20 000 Р"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/oh_pickup_n"
+                    style="@style/Body_Regular14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="16dp"
+
+                    android:text="Самовывоз 0 Р"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/oh_product_n">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/oh_balls_n"
+                    style="@style/Body_Regular14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+
+                    android:layout_marginEnd="16dp"
+                    android:text="-200 Р"
+
+                    android:textColor="@android:color/holo_red_dark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/oh_pickup_n">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/oh_discount_n"
+                    style="@style/Body_Regular14"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="16dp"
+
+                    android:text="Скидка 0%"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/oh_balls_n">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/oh_total_n"
+                    style="@style/Subtitle_Semibold14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="19dp"
+                    android:layout_marginEnd="16dp"
+
+                    android:text="Итого 20 000 Р"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/oh_discount_n">
+
+                </TextView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/view"
+                style="@style/BaseDivider"
+
+                android:layout_marginTop="33dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+
+            <TextView
+                android:id="@+id/oh_method_receipt_txt"
+                style="@style/Title_Bold16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="32dp"
+
+                android:text="Способ получения"
+
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/oh_method_receipt_page"
+
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="8dp"
+                android:paddingBottom="30dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/oh_method_receipt_txt">
+
+                <TextView
+                    android:id="@+id/oh_delivery_points_txt"
+                    style="@style/Subtitle_Regular15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+
+                    android:text="Самовывоз"
+
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/oh_delivery_points"
+                    style="@style/Body_Regular14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+
+                    android:layout_marginTop="2dp"
+                    android:hint="Выберите пункт выдачи заказа"
+
+                    android:textColor="@color/type_gray50"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/oh_delivery_points_txt">
+
+                </TextView>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="20dp"
+                    android:contentDescription="@drawable/ic_forward"
+                    android:visibility="invisible"
+                    android:src="@drawable/ic_forward"
+                    app:layout_constraintBottom_toBottomOf="@+id/oh_delivery_points"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/oh_delivery_points_txt" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+<!--    app bar-->
+    <include layout="@layout/include_appbar"
+        android:id="@+id/oh_page_appbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+<!--    status-->
+    <include layout="@layout/include_status"
+        android:id="@+id/oh_page_status"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    progress bar-->
+    <ProgressBar
+        android:id="@+id/oh_page_pb"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:theme="@style/LoadProducts"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+

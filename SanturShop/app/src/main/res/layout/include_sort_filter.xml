@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/sort_filter_page"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="#F7F8FA"
+
+
+
+    >
+
+
+    <LinearLayout
+        android:id="@+id/sort_filter_sort_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+
+        android:background="#F7F8FA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_group"
+
+            >
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/sort_filter_sort_btn"
+            style="@style/Caption_Semibold13"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:background="#F7F8FA"
+            android:gravity="center"
+            android:text="Сортировка">
+
+        </TextView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/sort_filter_filter_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="#F7F8FA"
+        android:layout_marginEnd="60dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_filter"
+
+            >
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/sort_filter_filter_btn"
+            style="@style/Caption_Semibold13"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:background="#F7F8FA"
+            android:gravity="center"
+            android:text="Фильтры">
+
+        </TextView>
+
+
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+

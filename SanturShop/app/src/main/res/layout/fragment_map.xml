@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/map_page_base"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginBottom="55dp"
+
+    >
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/map_coordinator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/secondary"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <WebView
+            android:id="@+id/ya_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/map_appbar_view_back"
+            android:layout_width="48dp"
+            android:layout_height="52dp"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/map_appbar_img_back"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="16dp"
+
+                android:contentDescription="@drawable/ic_back"
+                android:src="@drawable/ic_back"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--    android:layout_height="340dp"-->
+<!--        android:background="#FFFFFF"-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/map_page_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+
+            android:background="@drawable/disc_card"
+
+            android:elevation="8dp"
+
+            android:visibility="visible"
+
+            app:behavior_hideable="false"
+
+            app:behavior_peekHeight="160dp"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/map_title_constr_1"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageView
+                    android:id="@+id/map_img_UpDown"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="16dp"
+
+                    android:contentDescription="@drawable/ic_up"
+                    android:src="@drawable/ic_up"
+                    android:tag="map_img"
+
+
+                    app:layout_constraintBottom_toBottomOf="@+id/map_title_1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/map_title_1" />
+
+                <TextView
+                    android:id="@+id/map_title_1"
+                    style="@style/Title_Bold16"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="56dp"
+                    android:layout_marginStart="40dp"
+
+
+
+
+                    android:gravity="center_vertical"
+                    android:paddingStart="32dp"
+
+
+                    android:text="Адреса"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/map_rv_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="56dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/map_title_constr_1" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/map_page_2"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:background="@drawable/disc_card"
+
+            android:elevation="8dp"
+
+            android:visibility="gone"
+
+            app:behavior_hideable="false"
+
+            app:behavior_peekHeight="170dp"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/map_title_constr_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <TextView
+                    android:id="@+id/map_title_2"
+                    style="@style/Title_Bold16"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+
+
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/white"
+
+
+                    android:text="map_title_2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/map_payvariants_2"
+                    style="@style/Body_Regular14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/white"
+                    android:text="map_type_2"
+
+
+                    android:textColor="@color/type_gray50"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/map_title_2" />
+
+
+                <TextView
+                    android:id="@+id/map_opening_hours_2"
+                    style="@style/Body_Regular14"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="4dp"
+
+                    android:background="@color/white"
+
+
+                    android:text="map_opening_hours_2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/map_payvariants_2" />
+
+
+                <TextView
+                    android:id="@+id/map_phone_2"
+                    style="@style/Body_Regular14"
+
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/white"
+
+
+                    android:text="map_phone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/map_opening_hours_2" />
+
+                <TextView
+                    android:id="@+id/map_distance_to_2"
+                    style="@style/Body_Regular14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:visibility="invisible"
+
+                    android:layout_marginEnd="16dp"
+
+                    android:background="@color/white"
+                    android:text="10 км"
+
+
+                    android:textColor="@color/type_gray50"
+                    app:layout_constraintBottom_toBottomOf="@+id/map_opening_hours_2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/map_opening_hours_2" />
+
+
+                <TextView
+                    android:id="@+id/map_select_btn_2"
+                    style="@style/ButtonBase"
+                    android:layout_width="104dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/btn_active"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+
+                    android:tag="map_select_2"
+
+
+                    android:text="Выбрать"
+
+
+                    android:textColor="@color/white"
+
+
+                    app:layout_constraintStart_toStartOf="@+id/map_phone_2"
+                    app:layout_constraintTop_toBottomOf="@+id/map_phone_2" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+<!--    appbar-->
+    <include layout="@layout/include_appbar"
+        android:id="@+id/map_appbar"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+<!--    status-->
+    <include layout="@layout/include_status"
+        android:id="@+id/map_status"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+<!--    progress bar-->
+    <ProgressBar
+        android:id="@+id/map_pb"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:theme="@style/LoadProducts"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

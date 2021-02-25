@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/list_page"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+
+        android:layout_width="match_parent"
+        android:layout_height="136dp"
+
+
+        >
+
+
+        <ImageView
+            android:id="@+id/list_img"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+
+            app:srcCompat="@mipmap/ic_launcher"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/list_name"
+            android:textColor="@color/type_black"
+            style="@style/Caption_Regular13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="36dp"
+            android:maxLines="2"
+            android:gravity="center_vertical"
+            android:layout_marginStart="96dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="16dp"
+            android:singleLine="false"
+            android:text="some name"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/list_img"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+        <TextView
+            android:id="@+id/list_prices"
+            style="@style/Subtitle_Semibold14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:minHeight="20dp"
+
+            android:text="price"
+
+            app:layout_constraintStart_toEndOf="@+id/list_img"
+            app:layout_constraintTop_toBottomOf="@+id/list_name" />
+
+        <TextView
+            android:id="@+id/list_ed"
+            style="@style/Body_Regular14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="ed"
+            android:textColor="@color/type_gray50"
+
+            app:layout_constraintBottom_toBottomOf="@+id/list_prices"
+
+            app:layout_constraintStart_toEndOf="@+id/list_prices"
+            app:layout_constraintTop_toTopOf="@+id/list_prices" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/list_constrCart"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginTop="13dp"
+
+            app:layout_constraintStart_toStartOf="@+id/list_prices"
+            app:layout_constraintTop_toBottomOf="@+id/list_prices"
+
+            >
+
+
+            <ImageView
+                android:id="@+id/list_Remove"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@color/secondary"
+                android:src="@drawable/ic_remove"
+                android:contentDescription="@drawable/ic_remove"
+                android:foreground="?android:attr/selectableItemBackground"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+            </ImageView>
+
+            <EditText
+                android:id="@+id/list_cart"
+                style="@style/Button_EditText"
+                android:layout_width="70dp"
+                android:layout_height="32dp"
+                android:background="@color/secondary"
+                android:backgroundTint="@color/secondary"
+                android:gravity="center"
+                android:inputType="number"
+
+                android:enabled="false"
+
+                android:tag="cart_cart"
+
+                android:text="1"
+                app:cornerRadius="0dp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                app:layout_constraintStart_toEndOf="@+id/list_Remove"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </EditText>
+
+            <ImageView
+                android:id="@+id/list_Add"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@color/secondary"
+                android:src="@drawable/ic_add"
+                android:contentDescription="@drawable/ic_add"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/list_cart"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+            </ImageView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/list_add_del_cart_deactive"
+            android:tag="list_add_del_cart_deactive"
+            android:layout_width="104dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/btn_disable"
+
+            android:visibility="invisible"
+
+            app:layout_constraintStart_toStartOf="@+id/list_prices"
+            app:layout_constraintTop_toBottomOf="@+id/list_prices"
+            >
+
+
+            <ProgressBar
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:theme="@style/LoadProgress"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </ProgressBar>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+        <TextView
+            android:id="@+id/list_add_del_cart_active"
+            android:tag="list_add_del_cart_active"
+            style="@style/Button"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_active"
+            android:layout_width="104dp"
+            android:layout_height="32dp"
+
+            android:gravity="center"
+
+            android:visibility="visible"
+
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+
+
+
+            android:layout_marginTop="13dp"
+
+            android:text="В корзину"
+
+            android:foreground="?android:attr/selectableItemBackground"
+
+            app:layout_constraintStart_toStartOf="@+id/list_prices"
+            app:layout_constraintTop_toBottomOf="@+id/list_prices"/>
+
+
+
+        <ImageView
+            android:id="@+id/list_favorite"
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+
+            android:layout_marginEnd="16dp"
+
+            android:visibility="visible"
+
+            android:src="@drawable/ic_fav_active"
+            android:tag="list_favorite"
+
+
+            android:text="В избранное"
+
+
+            app:layout_constraintBottom_toBottomOf="@+id/list_add_del_cart_active"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/list_add_del_cart_active">
+
+        </ImageView>
+
+
+        <ImageView
+            android:id="@+id/list_more"
+
+            android:layout_width="25dp"
+            android:layout_height="27dp"
+
+            android:layout_marginEnd="16dp"
+
+            android:src="@drawable/ic_more"
+
+
+            android:text="В избранное"
+            android:visibility="invisible"
+
+
+            app:layout_constraintBottom_toBottomOf="@+id/list_constrCart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/list_constrCart">
+
+        </ImageView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

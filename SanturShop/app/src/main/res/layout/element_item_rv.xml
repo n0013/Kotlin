@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/page_rv"
+    android:tag="page_rv"
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+
+
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/img_rv"
+        android:tag="img_rv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/ic_launcher"
+        android:contentDescription="@mipmap/ic_launcher"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/name_rv"
+        android:tag="name_rv"
+        style="@style/Subtitle_Regular15"
+
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+
+        android:gravity="center_vertical"
+
+        android:paddingStart="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+
+        android:layout_marginEnd="30dp"
+
+        android:text="@string/name_rv"
+
+        android:lines="2"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_rv"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <Switch
+        android:id="@+id/switch_rv"
+        android:tag="switch_rv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:visibility="gone"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/img_right_rv"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <TextView
+        android:id="@+id/name2_rv"
+        android:tag="name2_rv"
+        style="@style/Caption_Regular13"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="@string/name2_rv"
+        android:gravity="center_vertical"
+
+
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+
+        android:visibility="gone"
+        android:textColor="@color/type_gray50"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/img_right_rv"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/name3_rv"
+        android:tag="name3_rv"
+        style="@style/Body_Regular14"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="name3_rv"
+        android:gravity="center_vertical"
+
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+
+        android:visibility="gone"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/img_right_rv"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/img_select_rv"
+        android:tag="img_select_rv"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:visibility="gone"
+        android:src="@drawable/ic_done"
+        android:contentDescription="@drawable/ic_done"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/img_right_rv"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/img_right_rv"
+        android:tag="img_item_rv"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_forward"
+        android:contentDescription="@drawable/ic_forward"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
